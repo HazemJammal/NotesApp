@@ -1,0 +1,15 @@
+C:\Users\thill_jgsae68\Desktop\new entity\poulation\Solution1\Data\bin\Debug\Data.dll.config
+C:\Users\thill_jgsae68\Desktop\new entity\poulation\Solution1\Data\bin\Debug\Data.dll
+C:\Users\thill_jgsae68\Desktop\new entity\poulation\Solution1\Data\bin\Debug\Data.pdb
+C:\Users\thill_jgsae68\Desktop\new entity\poulation\Solution1\Data\bin\Debug\EntityFramework.dll
+C:\Users\thill_jgsae68\Desktop\new entity\poulation\Solution1\Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\thill_jgsae68\Desktop\new entity\poulation\Solution1\Data\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\thill_jgsae68\Desktop\new entity\poulation\Solution1\Data\bin\Debug\EntityFramework.xml
+C:\Users\thill_jgsae68\Desktop\new entity\poulation\Solution1\Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\thill_jgsae68\Desktop\new entity\poulation\Solution1\Data\obj\Debug\Data.csproj.AssemblyReference.cache
+C:\Users\thill_jgsae68\Desktop\new entity\poulation\Solution1\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+C:\Users\thill_jgsae68\Desktop\new entity\poulation\Solution1\Data\obj\Debug\Data.csproj.CopyComplete
+C:\Users\thill_jgsae68\Desktop\new entity\poulation\Solution1\Data\obj\Debug\Data.dll
+C:\Users\thill_jgsae68\Desktop\new entity\poulation\Solution1\Data\obj\Debug\Data.pdb
+C:\Users\thill_jgsae68\Desktop\new entity\poulation\Solution1\Data\obj\Debug\Data.Migrations.first.resources
+C:\Users\thill_jgsae68\Desktop\new entity\poulation\Solution1\Data\obj\Debug\Data.csproj.GenerateResource.cache
