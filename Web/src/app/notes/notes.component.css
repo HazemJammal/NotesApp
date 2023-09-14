@@ -1,0 +1,18 @@
+.card {
+  min-height: 300px;
+  max-height: 400px;
+  border-radius: 5%;
+  background: #F5972C;
+  width: 23%;
+}
+
+.para {
+  height: 90%;
+}
+
+.pen {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: #000;
+}

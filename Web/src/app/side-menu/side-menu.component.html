@@ -1,0 +1,13 @@
+<div class="d-flex flex-column">
+  <h1 class="pt-5 pb-4 align-self-center h1-smaller ">
+    Best Notes
+  </h1>
+  <div class="p-3 d-flex flex-column">
+    <h1 class=" text-center circle  align-self-center" (click)="showNotes = !showNotes">+</h1>
+    <div class="m-2 align-self-center" (click)="addTempNote($event)" [class.small-circle]="showNotes" style="background: #F5972C;"></div>
+    <div class="m-2 align-self-center" (click)="addTempNote($event)" [class.small-circle]="showNotes" style="background: #F3542A;"></div>
+    <div class="m-2 align-self-center" (click)="addTempNote($event)" [class.small-circle]="showNotes" style="background: #7049F0;"></div>
+    <div class="m-2 align-self-center" (click)="addTempNote($event)" [class.small-circle]="showNotes" style="background: #0AA4F6;"></div>
+    <div class="m-2 align-self-center" (click)="addTempNote($event)" [class.small-circle]="showNotes" style="background: #C6D947;"></div>
+  </div>
+</div>

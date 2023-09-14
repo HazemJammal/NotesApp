@@ -1,0 +1,23 @@
+.h1-smaller {
+  font-size: 25px
+}
+
+.circle {
+  font-family: 'Raleway', sans-serif;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  background: #000;
+  cursor:pointer;
+}
+
+.small-circle {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #000;
+  cursor: pointer;
+}

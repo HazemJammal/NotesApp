@@ -1,0 +1,76 @@
+<div class="form-group mb-3 mt-5 row" style="margin-right: 0;">
+  <div class="input-group-prepend w-100">
+    <span class="input-group-text" style="background: none; border: none;" id="basic-addon1">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+      </svg>
+    </span>
+    <input type="text" [(ngModel)]="searchQuery" (keyup)="filterNotes($event)" style="border:none;" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+</div>
+
+  <!--<div class="card  mr-4 p-4 mb-4">
+    <p class="para">hello  </p>
+    <div class="d-flex">
+      <small class="w-75">May 21,2020</small>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen w-25" viewBox="0 0 16 16">
+        <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z" />
+      </svg>
+    </div>
+  </div>
+  <div *ngFor="let note of notes.slice().reverse()" class="card  mr-4 p-4 mb-4" style="background :{{note.color}}">
+    <div *ngIf="note.id == -1; else normal">
+      <textarea #content style="border:none; background:{{note.color}}; height:231.2px; resize: none;padding:0; color:#000" placeholder="Add Note.." class="form-control" aria-label="Username" aria-describedby="basic-addon1"></textarea>
+      <div class="d-flex">
+        <small class="w-75">{{note.date}}</small>
+        <svg (click)="addNote(content.value)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+          <path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z" />
+        </svg>
+      </div>
+    </div>
+    <ng-template #normal>
+      <textarea *ngIf="editNote == note.id else elseBlock" #content style="border:none; background:{{note.color}}; height:231.2px; resize: none;padding:0; color:#000" placeholder="Add Note.." class="form-control" aria-label="Username" aria-describedby="basic-addon1"></textarea>
+      <ng-template #elseBlock>
+        <p class="para">{{note.content}}</p>
+      </ng-template>
+      <div class="d-flex">
+        <small class="w-75">{{note.date}}</small>
+        <svg (click)="editNote = note.id" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen w-25" viewBox="0 0 16 16">
+          <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z" />
+        </svg>
+      </div>
+    </ng-template>
+  </div>-->
+
+  <div *ngIf="filteredNotes.length == 0; else normal">
+      <h1  style="text-align:center; margin-top:200px; display:block !important">No Notes are Found</h1>
+  </div>
+  <ng-template #normal>
+    <h1>Notes</h1>
+    <div class="d-flex flex-wrap">
+      <div *ngFor="let note of filteredNotes.slice().reverse()" class="card  mr-4 p-4 mb-4" style="background :{{note.color}}">
+
+        <div *ngIf="note.id == -1 || editNote == note.id; else normal">
+          <textarea #content style="border:none; background:{{note.color}}; height:231.2px; resize: none;padding:0; color:#000" placeholder="Add Note.." class="form-control" aria-label="Username" aria-describedby="basic-addon1"></textarea>
+          <div class="d-flex">
+            <small class="w-75">{{note.date}}</small>
+            <svg (click)="addUpdateNote(content.value,note.id)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+              <path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z" />
+            </svg>
+          </div>
+
+        </div>
+        <ng-template #normal>
+          <p (click)="deleteNote(note)">X</p>
+          <p class="para">{{note.content}}</p>
+          <div class="d-flex">
+            <small class="w-75">{{note.date}}</small>
+            <svg (click)="editNote = note.id" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen w-25" viewBox="0 0 16 16">
+              <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z" />
+            </svg>
+          </div>
+        </ng-template>
+      </div>
+      </div>
+  </ng-template>
+

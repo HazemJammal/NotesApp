@@ -1,0 +1,14 @@
+
+.grid {
+  display: grid;
+  grid-template-columns: 10% 5% 80% 5%;
+  grid-template-areas: "menu ... note ...";
+  height: 100vh !important;
+}
+.side-menu {
+  grid-area: menu;
+}
+.note{
+    grid-area:note;
+}
+

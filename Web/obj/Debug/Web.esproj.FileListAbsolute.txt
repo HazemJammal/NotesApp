@@ -1,0 +1,2 @@
+C:\Users\thill_jgsae68\Desktop\new entity\poulation\Solution1\Web\obj\Debug\Web.esproj.SuggestedBindingRedirects.cache
+C:\Users\thill_jgsae68\Desktop\new entity\poulation\Solution1\Web\obj\Debug\Web.esproj.CoreCompileInputs.cache
